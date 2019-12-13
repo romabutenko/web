@@ -23,6 +23,11 @@
         <el-switch v-model="sidebarLogo" class="drawer-switch" />
       </div>
 
+      <div class="drawer-item">
+        <span>Show avatar</span>
+        <el-switch v-model="showAvatar" class="drawer-switch" />
+      </div>
+
     </div>
   </div>
 </template>
@@ -52,6 +57,7 @@ export default {
         return this.$store.state.settings.tagsView
       },
       set(val) {
+        console.log(val)
         this.$store.dispatch('settings/changeSetting', {
           key: 'tagsView',
           value: val
@@ -65,6 +71,17 @@ export default {
       set(val) {
         this.$store.dispatch('settings/changeSetting', {
           key: 'sidebarLogo',
+          value: val
+        })
+      }
+    },
+    showAvatar: {
+      get() {
+        return this.$store.state.settings.showAvatar
+      },
+      set(val) {
+        this.$store.dispatch('settings/changeSetting', {
+          key: 'showAvatar',
           value: val
         })
       }
