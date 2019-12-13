@@ -1,4 +1,5 @@
 import variables from '@/styles/element-variables.scss'
+console.log(variables)
 import defaultSettings from '@/settings'
 
 const { showSettings, tagsView, fixedHeader, sidebarLogo, showAvatar } = defaultSettings
