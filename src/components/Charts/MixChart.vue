@@ -47,14 +47,14 @@ export default {
       const xData = (function() {
         const data = []
         for (let i = 1; i < 13; i++) {
-          data.push(i + 'month')
+          data.push(i + ' month')
         }
         return data
       }())
       this.chart.setOption({
-        backgroundColor: '#344b58',
+        backgroundColor: '#393939',
         title: {
-          text: 'statistics',
+          text: 'EBITDA',
           x: '20',
           top: '20',
           textStyle: {
@@ -90,7 +90,7 @@ export default {
           textStyle: {
             color: '#90979c'
           },
-          data: ['female', 'male', 'average']
+          data: ['Расходы', 'Доходы', 'ebitda']
         },
         calculable: true,
         xAxis: [{
@@ -111,7 +111,6 @@ export default {
           },
           axisLabel: {
             interval: 0
-
           },
           data: xData
         }],
@@ -142,27 +141,26 @@ export default {
             0
           ],
           bottom: 30,
-          start: 10,
-          end: 80,
+          start: 0,
+          end: 100,
           handleIcon: 'path://M306.1,413c0,2.2-1.8,4-4,4h-59.8c-2.2,0-4-1.8-4-4V200.8c0-2.2,1.8-4,4-4h59.8c2.2,0,4,1.8,4,4V413z',
           handleSize: '110%',
           handleStyle: {
             color: '#d3dee5'
-
           },
           textStyle: {
-            color: '#fff' },
+            color: '#fff'
+          },
           borderColor: '#90979c'
-
         }, {
           type: 'inside',
           show: true,
           height: 15,
-          start: 1,
-          end: 35
+          start: 0,
+          end: 100
         }],
         series: [{
-          name: 'female',
+          name: 'Расходы',
           type: 'bar',
           stack: 'total',
           barMaxWidth: 35,
@@ -183,7 +181,7 @@ export default {
             }
           },
           data: [
-            709,
+            7090,
             1917,
             2455,
             2610,
@@ -196,10 +194,8 @@ export default {
             2484,
             4078
           ]
-        },
-
-        {
-          name: 'male',
+        }, {
+          name: 'Доходы',
           type: 'bar',
           stack: 'total',
           itemStyle: {
@@ -216,7 +212,7 @@ export default {
             }
           },
           data: [
-            327,
+            3240,
             1776,
             507,
             1200,
@@ -230,7 +226,7 @@ export default {
             220
           ]
         }, {
-          name: 'average',
+          name: 'ebitda',
           type: 'line',
           stack: 'total',
           symbolSize: 10,

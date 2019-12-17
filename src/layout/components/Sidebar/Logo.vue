@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import logo from '@/assets/logo.png'
+
 export default {
   name: 'SidebarLogo',
   props: {
@@ -24,14 +26,15 @@ export default {
   },
   data() {
     return {
-      title: 'Vue Element Admin',
-      logo: 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
+      title: 'Palantir',
+      logo: logo
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+@import "~@/styles/variables.scss";
 .sidebarLogoFade-enter-active {
   transition: opacity 1.5s;
 }
@@ -46,7 +49,7 @@ export default {
   width: 100%;
   height: 50px;
   line-height: 50px;
-  background: #2b2f3a;
+  background: $menuBg;
   text-align: center;
   overflow: hidden;
 

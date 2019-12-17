@@ -33,6 +33,7 @@
       fit
       highlight-current-row
       style="width: 100%;"
+      height="300"
       @sort-change="sortChange"
     >
       <el-table-column label="ID" prop="id" sortable="custom" align="center" width="80" :class-name="getSortClass('id')">

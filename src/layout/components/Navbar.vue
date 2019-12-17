@@ -95,12 +95,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "~@/styles/variables.scss";
+
   .navbar {
     height: 50px;
     overflow: hidden;
     position: relative;
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+    background: $navbarBg;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
 
     .hamburger-container {
       line-height: 46px;
