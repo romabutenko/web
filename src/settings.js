@@ -29,7 +29,7 @@ module.exports = {
    * @type {boolean} true | false*
    * @description Whether show the avatar in sidebar
    */
-  showAvatar: true,
+  showAvatar: false,
 
   /**
    * @type {string | array} 'production' | ['production', 'development']
