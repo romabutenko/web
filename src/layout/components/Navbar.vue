@@ -103,6 +103,8 @@ export default {
     position: relative;
     background: $navbarBg;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin: 10px;
 
     .hamburger-container {
       line-height: 46px;

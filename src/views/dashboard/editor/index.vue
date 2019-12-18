@@ -48,7 +48,7 @@ export default {
   }
 
   .dashboard-editor-container {
-    background-color: #e3e3e3;
+    background-color: #444444!important;
     min-height: 100vh;
     padding: 50px 60px 0px;
     .pan-info-roles {
@@ -65,7 +65,7 @@ export default {
       .display_name {
         font-size: 48px;
         line-height: 48px;
-        color: #212121;
+        color: #fff;
         position: absolute;
         top: 25px;
       }

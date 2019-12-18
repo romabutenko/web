@@ -21,10 +21,10 @@ export default {
   data() {
     return {
       tabMapOptions: [
-        { label: 'China', key: 'CN' },
-        { label: 'USA', key: 'US' },
-        { label: 'Japan', key: 'JP' },
-        { label: 'Eurozone', key: 'EU' }
+        { label: 'Все', key: 'CN' },
+        { label: 'Вагжанова', key: 'US' },
+        { label: 'Полевая', key: 'JP' },
+        { label: 'Орлэкс', key: 'EU' }
       ],
       activeName: 'CN',
       createdTimes: 0

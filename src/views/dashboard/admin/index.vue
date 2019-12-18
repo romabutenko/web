@@ -97,9 +97,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~@/styles/variables.scss";
 .dashboard-editor-container {
   padding: 32px;
-  background-color: rgb(240, 242, 245);
+  background-color: $mainBg;
   position: relative;
 
   .github-corner {
