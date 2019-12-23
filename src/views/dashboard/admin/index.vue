@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-editor-container">
-    <el-tag v-if="checkPermission(['root'])">admin</el-tag>
+    <el-tag v-if="checkPermission(['admin'])">admin</el-tag>
 
     <panel-group @handleSetLineChartData="handleSetLineChartData" />
 
@@ -97,7 +97,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~@/styles/variables.scss";
+@import "~@/styles/variables.
+scss";
 .dashboard-editor-container {
   padding: 32px;
   background-color: $mainBg;
