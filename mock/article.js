@@ -111,6 +111,25 @@ export default [
         data: 'success'
       }
     }
+  },
+
+  {
+    // uUrl must match your api route
+    // For example, the route of fetchComments may be /article/1/comments or /article/2/comments
+    // So you need to match by regular
+    url: '/article/[A-Za-z0-9]/comments',
+    type: 'get', // Must be the same type as your interface defines
+    response: (req, res) => {
+      // return result
+      // req and res detail see
+      // https://expressjs.com/zh-cn/api.html#req
+      return {
+        code: 20000,
+        data: {
+          status: 'success'
+        }
+      }
+    }
   }
 ]
 

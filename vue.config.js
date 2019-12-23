@@ -28,7 +28,7 @@ module.exports = {
   // publicPath: process.env.NODE_ENV === 'development' ? '/' : 'palantir_deployer/dist/',
   outputDir: 'dist',
   assetsDir: 'static',
-  lintOnSave: process.env.NODE_ENV === 'development',
+  lintOnSave: process.env.NODE_ENV !== 'development',
   productionSourceMap: false,
   devServer: {
     port: port,
@@ -106,7 +106,7 @@ module.exports = {
             .after('html')
             .use('script-ext-html-webpack-plugin', [{
               // `runtime` must same as runtimeChunk name. default is `runtime`
-              inline: /runtime\..*\.js$/
+              inline: /runt ime\..*\.js$/
             }])
             .end()
           config

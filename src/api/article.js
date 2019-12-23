@@ -38,3 +38,10 @@ export function updateArticle(data) {
     data
   })
 }
+
+export function fetchComments(id) {
+  return request({
+    url: `/article/${id}/comments`,
+    method: 'get'
+  })
+}
