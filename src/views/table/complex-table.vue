@@ -33,7 +33,7 @@
       fit
       highlight-current-row
       style="width: 100%;"
-      height="300"
+      height="70vh"
       @sort-change="sortChange"
     >
       <el-table-column label="ID" prop="id" sortable="custom" align="center" width="80" :class-name="getSortClass('id')">
@@ -41,9 +41,19 @@
           <span>{{ row.id }}</span>
         </template>
       </el-table-column>
+      <el-table-column label="forecast" prop="forecast" sortable="custom" align="center" width="80" :class-name="getSortClass('id')">
+        <template slot-scope="{row}">
+          <span>{{ row.forecast }}</span>
+        </template>
+      </el-table-column>
+      <el-table-column label="platforms" prop="platforms" sortable="custom" align="center" width="80" :class-name="getSortClass('id')">
+        <template slot-scope="{row}">
+          <span>{{ row.platforms }}</span>
+        </template>
+      </el-table-column>
       <el-table-column label="Date" width="150px" align="center">
         <template slot-scope="{row}">
-          <span>{{ row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
+          <span>{{ row.timestamp | parseTime('{y}-{M}-{d} {h}:{i}') }}</span>
         </template>
       </el-table-column>
       <el-table-column label="Title" min-width="150px">
@@ -233,6 +243,7 @@ export default {
   methods: {
     getList() {
       this.listLoading = true
+      console.log(this.listQuery)
       fetchList(this.listQuery).then(response => {
         this.list = response.data.items
         this.total = response.data.total

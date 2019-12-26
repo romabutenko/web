@@ -130,15 +130,40 @@ export const constantRoutes = [
  */
 export const asyncRoutes = [
   {
-    path: '/test',
+    path: '/reports',
+    redirect: '/reports/pnl',
     component: Layout,
-    redirect: '/test/index',
-    name: 'test',
+    alwaysShow: true,
+    name: 'Reports',
     meta: {
-      title: 'Test page',
-      icon: 'chart'
-    }
+      title: 'Отчёты',
+      icon: 'skill'
+    },
+    children: [
+      {
+        path: 'pnl',
+        component: () => import('@/views/reports/pnl/index'),
+        name: 'P&L Report',
+        meta: {
+          title: 'P&L Report',
+          roles: ['admin']
+        }
+      },
+      {
+        path: 'project',
+        component: () => import('@/views/reports/project/index'),
+        name: 'Project Report',
+        meta: { title: 'Проект' }
+      },
+      {
+        path: 'location',
+        component: () => import('@/views/reports/location/index'),
+        name: 'Location Report',
+        meta: { title: 'Отчет Площадка' }
+      }
+    ]
   },
+
   {
     path: '/permission',
     component: Layout,

@@ -1,5 +1,6 @@
 <template>
   <div class="dashboard-container">
+    <div v-if="checkPermission(['admin'])">admin</div>
     <component :is="currentRole" />
   </div>
 </template>
@@ -8,6 +9,7 @@
 import { mapGetters } from 'vuex'
 import adminDashboard from './admin'
 import editorDashboard from './editor'
+import checkPermission from '@/utils/permission'
 
 export default {
   name: 'Dashboard',
@@ -26,6 +28,7 @@ export default {
     if (!this.roles.includes('admin')) {
       this.currentRole = 'editorDashboard'
     }
-  }
+  },
+  methods: { checkPermission }
 }
 </script>

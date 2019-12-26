@@ -1,6 +1,5 @@
 <template>
   <div class="dashboard-editor-container">
-    <el-tag v-if="checkPermission(['admin'])">admin</el-tag>
 
     <panel-group @handleSetLineChartData="handleSetLineChartData" />
 
